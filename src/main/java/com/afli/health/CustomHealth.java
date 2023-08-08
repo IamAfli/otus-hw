@@ -1,4 +1,4 @@
-package com.afli.otushomework1;
+package com.afli.health;
 
 public class CustomHealth {
 

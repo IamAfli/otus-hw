@@ -1,4 +1,4 @@
-package com.afli.otushomework1;
+package com.afli.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,5 +1,6 @@
-package com.afli.otushomework1;
+package com.afli.controller;
 
+import com.afli.health.CustomHealth;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
