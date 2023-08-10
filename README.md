@@ -1,6 +1,6 @@
 Simple web application for OTUS homework 1
 
-Runs on port 8080
+Runs on port 8000
 
 Available APIs:
 - GET /greeting
