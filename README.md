@@ -43,3 +43,42 @@ docker run \
     -p 8080:8000 \
     otus-hw-1
 ```
+
+---
+
+Start minikube
+
+```
+minikube start
+```
+
+Setup nginx ingress controller, installed via helm (not minikube default) 
+
+```
+kubectl create namespace m \
+    && helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx/ \
+    && helm repo update \
+    && helm install nginx ingress-nginx/ingress-nginx --namespace m -f ./setup/nginx-ingress.yaml
+```
+
+Apply all k8s configurations
+
+```
+kubectl apply -f ./k8s/
+```
+
+Setup minikube tunnel
+
+```
+minikube tunnel
+```
+
+Configure hosts in /etc/hosts:
+```
+127.0.0.1 arch.homework
+```
+
+URLs for testing:
+- GET http://arch.homework/health
+- GET http://arch.homework/otusapp/afli/health
+- GET http://arch.homework/otusapp/afli/greeting
