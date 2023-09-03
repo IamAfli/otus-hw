@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iamafli-simple-app
+  labels:
+    app: iamafli
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: iamafli
+  template:
+    metadata:
+      labels:
+        app: iamafli
+    spec:
+      containers:
+        - name: iamafli-simple-app
+          image: iamafli/otus-hw-1:latest
+          ports:
+            - name: web
+              containerPort: 8000
